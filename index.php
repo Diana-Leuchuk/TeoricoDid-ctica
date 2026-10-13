@@ -1,40 +1,19 @@
-<?php
-
-$titulo = "Diagramas de Actividad UML";
-
-$curso = "Ingeniería de Software";
-
-?>
 
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Aprende diagramas de actividad UML, sus símbolos, decisiones y flujos de trabajo.">
 
-
-
-    <title><?= htmlspecialchars($titulo) ?> | <?= htmlspecialchars($curso) ?></title>
-
-
+    <title>Diagramas de Actividad UML | Ingeniería de Software</title>
 
     <link rel="stylesheet" href="stylesda.css">
-
     <script src="script.js" defer></script>
-
 </head>
 
-
-
 <body>
-
-
 
 <header class="navbar">
     <span class="navbar-title">DIAGRAMA DE ACTIVIDAD <span>UML</span></span>
@@ -50,912 +29,496 @@ $curso = "Ingeniería de Software";
             aria-label="Abrir menú" aria-expanded="false">☰</button>
 </header>
 
-
-
 <main>
 
-
-
     <!-- PORTADA -->
-
     <section class="hero section" id="inicio">
 
-
-
         <div class="hero-content">
-
             <div class="eyebrow">
-
                 <span class="status-dot"></span>
-
                 INGENIERÍA DE SOFTWARE / UML
-
             </div>
-
-
 
             <h1>
-
                 Dale forma<br>
-
                 a la <span class="highlight">lógica.</span>
-
             </h1>
 
-
-
             <p class="hero-description">
-
                 Descubrí cómo representar visualmente un proceso,
-
                 conectar acciones y tomar decisiones antes de
-
                 escribir una sola línea de código.
-
             </p>
 
-<div class="hero-note">
-
+            <div class="hero-note">
                 <span class="note-line"></span>
-
                 PENSAR · MODELAR · DESARROLLAR
-
             </div>
-
         </div>
 
-
-
         <div class="hero-visual">
-
             <div class="visual-top">
-
                 <div>
-
                     <span class="mini-label">UML / ACTIVITY</span>
-
                     <h3>Flujo de autenticación</h3>
-
                 </div>
-
                 <span class="live-tag">● DIAGRAMA</span>
-
             </div>
 
-
-
             <div class="diagram-canvas">
-
-                <svg class="hero-diagram zoomable-image" viewBox="0 0 380 390"
-
-                     role="button" tabindex="0"
-
+                <svg class="hero-diagram zoomable-image"
+                     viewBox="0 0 380 390"
+                     role="button"
+                     tabindex="0"
                      aria-label="Ampliar diagrama UML de inicio de sesión">
 
-
-
                     <defs>
-
-                        <marker id="flechaHero" markerWidth="8"
-
-                                markerHeight="8" refX="6" refY="3"
-
+                        <marker id="flechaHero"
+                                markerWidth="8"
+                                markerHeight="8"
+                                refX="6"
+                                refY="3"
                                 orient="auto">
-
                             <path d="M0,0 L6,3 L0,6"
-
-                                  fill="none" stroke="#72563E"
-
+                                  fill="none"
+                                  stroke="#72563E"
                                   stroke-width="1.4"/>
-
                         </marker>
-
                     </defs>
-
-
 
                     <circle cx="190" cy="24" r="8" fill="#493527"/>
 
-
-
-                    <path d="M190 32 V52" class="flow-line"
-
+                    <path d="M190 32 V52"
+                          class="flow-line"
                           marker-end="url(#flechaHero)"/>
 
-
-
                     <rect x="105" y="56" width="170" height="46"
-
                           rx="13" class="node-action"/>
 
                     <text x="190" y="75" class="node-text">
-
                         <tspan x="190">Ingresar usuario</tspan>
-
                         <tspan x="190" dy="14">y contraseña</tspan>
-
                     </text>
 
-
-
-                    <path d="M190 102 V126" class="flow-line"
-
+                    <path d="M190 102 V126"
+                          class="flow-line"
                           marker-end="url(#flechaHero)"/>
 
-
-
                     <path d="M190 126 L239 158 L190 190 L141 158 Z"
-
                           class="node-decision"/>
 
                     <text x="190" y="155" class="decision-text">
-
                         <tspan x="190">¿Datos</tspan>
-
                         <tspan x="190" dy="12">válidos?</tspan>
-
                     </text>
 
-
-
                     <path d="M141 158 H69 V219"
-
-                          class="flow-line" marker-end="url(#flechaHero)"/>
+                          class="flow-line"
+                          marker-end="url(#flechaHero)"/>
 
                     <text x="82" y="148" class="branch-label">NO</text>
 
-
-
                     <rect x="8" y="222" width="122" height="43"
-
                           rx="12" class="node-error"/>
 
                     <text x="69" y="240" class="node-text">
-
                         <tspan x="69">Mostrar</tspan>
-
                         <tspan x="69" dy="13">error</tspan>
-
                     </text>
 
-
-
                     <path d="M69 265 V288 H105 V79"
-
-                          class="flow-return" marker-end="url(#flechaHero)"/>
-
-
+                          class="flow-return"
+                          marker-end="url(#flechaHero)"/>
 
                     <path d="M239 158 H305 V219"
-
-                          class="flow-line" marker-end="url(#flechaHero)"/>
+                          class="flow-line"
+                          marker-end="url(#flechaHero)"/>
 
                     <text x="269" y="148" class="branch-label">SÍ</text>
 
-
-
                     <rect x="244" y="222" width="122" height="43"
-
                           rx="12" class="node-success"/>
 
                     <text x="305" y="240" class="node-text">
-
                         <tspan x="305">Acceder al</tspan>
-
                         <tspan x="305" dy="13">sistema</tspan>
-
                     </text>
 
-
-
                     <path d="M305 265 V304"
-
-                          class="flow-line" marker-end="url(#flechaHero)"/>
-
-
+                          class="flow-line"
+                          marker-end="url(#flechaHero)"/>
 
                     <circle cx="305" cy="320" r="11"
-
-                            fill="none" stroke="#493527" stroke-width="2"/>
+                            fill="none"
+                            stroke="#493527"
+                            stroke-width="2"/>
 
                     <circle cx="305" cy="320" r="6" fill="#493527"/>
 
-
-
                     <text x="190" y="372" class="diagram-caption">
-
                         INICIO → DECISIÓN → RESULTADO
-
                     </text>
-
                 </svg>
-
             </div>
-
-
 
             <div class="visual-footer">
-
                 <span><i class="legend-dot start"></i> Inicio</span>
-
                 <span><i class="legend-dot action"></i> Acción</span>
-
                 <span><i class="legend-dot decision"></i> Decisión</span>
-
             </div>
-
         </div>
-
-
 
         <div class="hero-index">01 — MODELADO DE PROCESOS</div>
-
     </section>
-
-
 
     <!-- CONCEPTO -->
-
     <section class="section content-section" id="concepto">
 
-
-
         <div class="section-heading">
-
             <span class="section-kicker">01 / ENTENDER</span>
-
             <h2>¿Qué es un diagrama<br>de actividad?</h2>
-
         </div>
-
-
 
         <div class="concept-grid">
-
             <div class="concept-main">
-
                 <p class="lead">
-
                     Un diagrama de actividad es una representación
-
                     gráfica que muestra el <strong>flujo de acciones
-
                     y decisiones</strong> dentro de un proceso.
-
                 </p>
 
-
-
                 <p>
-
                     Forma parte de UML (Lenguaje Unificado de Modelado)
-
                     y permite comprender cómo comienza una actividad,
-
                     qué pasos se ejecutan, qué condiciones se evalúan
-
                     y cómo finaliza el proceso.
-
                 </p>
-
-
 
                 <p>
-
                     En Ingeniería de Software se utiliza para analizar
-
                     procesos, comunicar ideas y diseñar el comportamiento
-
                     de un sistema antes de programarlo.
-
                 </p>
-
             </div>
 
-
-
             <aside class="quote-card">
-
                 <span class="quote-mark">“</span>
-
                 <p>
-
                     Antes de programar una solución,
-
                     necesitamos entender el problema.
-
                 </p>
-
                 <span class="quote-caption">LA LÓGICA ANTES DEL CÓDIGO</span>
-
                 <div class="quote-decoration">01<span>/</span>UML</div>
-
             </aside>
-
         </div>
-
-
 
         <div class="benefit-grid">
-
             <article class="benefit-card">
-
                 <span class="card-number">01</span>
-
                 <span class="feature-icon">◎</span>
-
                 <h3>Comprender</h3>
-
                 <p>Visualizar un proceso de principio a fin.</p>
-
             </article>
 
-
-
             <article class="benefit-card">
-
                 <span class="card-number">02</span>
-
                 <span class="feature-icon">◇</span>
-
                 <h3>Analizar</h3>
-
                 <p>Identificar condiciones, alternativas y errores.</p>
-
             </article>
-
-
 
             <article class="benefit-card">
-
                 <span class="card-number">03</span>
-
                 <span class="feature-icon">⌘</span>
-
                 <h3>Comunicar</h3>
-
                 <p>Compartir la lógica con el equipo de desarrollo.</p>
-
             </article>
-
         </div>
-
     </section>
 
-
-
     <!-- SIMBOLOGÍA -->
-
     <section class="section symbols-section" id="simbolos">
 
-
-
         <div class="section-heading">
-
             <span class="section-kicker">02 / RECONOCER</span>
-
             <h2>Las piezas del flujo.</h2>
-
             <p>
-
                 Cada símbolo tiene una función específica.
-
                 Conocerlos es el primer paso para modelar procesos.
-
             </p>
-
         </div>
-
-
 
         <div class="symbols-grid">
 
-
-
             <article class="symbol-card">
-
                 <div class="symbol-display">
-
                     <span class="uml-start"></span>
-
                 </div>
-
                 <span class="symbol-number">SÍMBOLO 01</span>
-
                 <h3>Inicio</h3>
-
                 <p>Indica el punto donde comienza el flujo de actividad.</p>
-
                 <span class="symbol-name">Nodo inicial</span>
-
             </article>
 
-
-
             <article class="symbol-card">
-
                 <div class="symbol-display">
-
                     <span class="uml-action">Ejecutar acción</span>
-
                 </div>
-
                 <span class="symbol-number">SÍMBOLO 02</span>
-
                 <h3>Actividad</h3>
-
                 <p>Representa una tarea, operación o paso del proceso.</p>
-
                 <span class="symbol-name">Nodo de acción</span>
-
             </article>
 
-
-
             <article class="symbol-card">
-
                 <div class="symbol-display">
-
                     <span class="uml-diamond"><span>?</span></span>
-
                 </div>
-
                 <span class="symbol-number">SÍMBOLO 03</span>
-
                 <h3>Decisión</h3>
-
                 <p>Evalúa una condición y permite elegir entre caminos.</p>
-
                 <span class="symbol-name">Nodo de decisión</span>
-
             </article>
 
-
-
             <article class="symbol-card">
-
                 <div class="symbol-display">
-
                     <span class="uml-arrow">→</span>
-
                 </div>
-
                 <span class="symbol-number">SÍMBOLO 04</span>
-
                 <h3>Flujo</h3>
-
                 <p>Conecta los pasos e indica el orden de ejecución.</p>
-
                 <span class="symbol-name">Flujo de control</span>
-
             </article>
 
-
-
             <article class="symbol-card">
-
                 <div class="symbol-display">
-
                     <span class="uml-final"></span>
-
                 </div>
-
                 <span class="symbol-number">SÍMBOLO 05</span>
-
                 <h3>Final</h3>
-
                 <p>Señala la finalización de la actividad o del flujo.</p>
-
                 <span class="symbol-name">Nodo final</span>
-
             </article>
-
-
 
             <article class="symbol-card">
-
                 <div class="symbol-display">
-
                     <span class="uml-fork">
-
                         <i></i><i></i><i></i>
-
                     </span>
-
                 </div>
-
                 <span class="symbol-number">SÍMBOLO 06</span>
-
                 <h3>Bifurcación</h3>
-
                 <p>Representa acciones que pueden ejecutarse en paralelo.</p>
-
                 <span class="symbol-name">Fork / Join</span>
-
             </article>
-
-
 
         </div>
-
-
 
         <div class="tip-banner">
-
             <span class="tip-icon">!</span>
-
             <div>
-
                 <strong>Importante</strong>
-
                 <p>
-
                     Una decisión selecciona un camino según una condición.
-
                     Una bifurcación representa flujos paralelos.
-
                     No son lo mismo.
-
                 </p>
-
             </div>
-
         </div>
-
     </section>
 
-
-
     <!-- EJEMPLO -->
-
     <section class="section example-section" id="ejemplo">
 
-
-
         <div class="section-heading">
-
             <span class="section-kicker">03 / APLICAR</span>
-
             <h2>De la idea al proceso.</h2>
-
             <p>
-
                 Veamos cómo funciona un inicio de sesión.
-
                 Seguí el recorrido y observá qué ocurre en cada caso.
-
             </p>
-
         </div>
-
-
 
         <div class="example-layout">
 
-
-
             <div class="example-info">
-
                 <span class="example-tag">CASO PRÁCTICO / 001</span>
-
                 <h3>Acceso a un sistema</h3>
 
-
-
                 <p>
-
                     Un usuario ingresa sus credenciales.
-
                     El sistema verifica los datos y decide
-
                     si permite el acceso.
-
                 </p>
-
-
 
                 <div class="scenario-list">
-
                     <div>
-
                         <span class="scenario-dot yes"></span>
-
                         <p><strong>Si son válidos</strong><br>
-
                         El usuario entra al sistema.</p>
-
                     </div>
-
-
 
                     <div>
-
                         <span class="scenario-dot no"></span>
-
                         <p><strong>Si son incorrectos</strong><br>
-
                         Se muestra un mensaje de error.</p>
-
                     </div>
-
                 </div>
 
-
-
-                <button class="button-primary" id="runExample">
-
+                <button class="button-primary" id="runExample" type="button">
                     Simular proceso <span>▶</span>
-
                 </button>
 
-
-
-                <button class="button-secondary reset-button" id="resetExample">
-
+                <button class="button-secondary reset-button"
+                        id="resetExample" type="button">
                     Reiniciar
-
                 </button>
-
-
 
                 <p class="simulation-status" id="simulationStatus"
-
                    aria-live="polite">
-
                     Presioná “Simular proceso” para comenzar.
-
                 </p>
-
             </div>
 
-
-
             <div class="process-card">
-
                 <div class="process-header">
-
                     <span>ACTIVITY FLOW</span>
-
                     <span class="process-id">UML_001</span>
-
                 </div>
-
-
 
                 <div class="process-flow" id="processFlow">
 
-
-
                     <div class="process-start process-node" data-step="0">
-
                         <span class="uml-start"></span>
-
                         <span>Inicio</span>
-
                     </div>
-
-
 
                     <span class="process-arrow" data-arrow="0">↓</span>
 
-
-
                     <div class="process-action process-node" data-step="1">
-
                         Ingresar credenciales
-
                     </div>
-
-
 
                     <span class="process-arrow" data-arrow="1">↓</span>
 
-
-
                     <div class="process-decision process-node" data-step="2">
-
                         <span>¿Datos válidos?</span>
-
                     </div>
 
-
-
                     <div class="decision-branches">
-
                         <div class="branch branch-no">
-
                             <span class="branch-label">NO</span>
-
                             <span class="process-arrow" data-arrow="2">↓</span>
 
-
-
                             <div class="branch-action process-node" data-step="3">
-
                                 Mostrar error
-
                             </div>
-
-
 
                             <span class="branch-caption">
-
                                 Volver a ingresar
-
                             </span>
-
                         </div>
 
-
-
                         <div class="branch branch-yes">
-
                             <span class="branch-label">SÍ</span>
-
                             <span class="process-arrow" data-arrow="3">↓</span>
 
-
-
                             <div class="branch-action process-node" data-step="4">
-
                                 Acceder al sistema
-
                             </div>
-
-
 
                             <span class="process-arrow" data-arrow="4">↓</span>
 
-
-
                             <div class="process-end process-node" data-step="5">
-
                                 <span class="uml-final"></span>
-
                                 <span>Fin</span>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
-
-
         </div>
-
     </section>
 
-
-
     <!-- DESAFÍO -->
-
     <section class="section challenge-section" id="desafio">
 
-
-
         <div class="challenge-heading">
-
             <span class="section-kicker">04 / TU TURNO</span>
-
             <h2>¿Pensás como<br>desarrollador?</h2>
-
             <p>
-
                 Poné a prueba lo que aprendiste.
-
                 Elegí la respuesta correcta en cada pregunta.
-
             </p>
-
             <div class="challenge-decoration">{ }</div>
-
         </div>
 
-
-
         <div class="quiz-card">
-
             <div class="quiz-top">
-
                 <span>MINI DESAFÍO UML</span>
-
                 <span id="questionCounter">PREGUNTA 01 / 04</span>
-
             </div>
-
-
 
             <div class="quiz-progress">
-
                 <span id="quizProgress"></span>
-
             </div>
 
-
-
             <h3 id="questionText">
-
                 ¿Qué símbolo representa una decisión?
-
             </h3>
-
-
 
             <div class="quiz-options" id="quizOptions"></div>
 
-
-
             <p class="quiz-feedback" id="quizFeedback" aria-live="polite">
-
                 Seleccioná una opción para continuar.
-
             </p>
 
-
-
-            <button class="button-primary quiz-next" id="quizNext" disabled>
-
+            <button class="button-primary quiz-next"
+                    id="quizNext" type="button" disabled>
                 Siguiente pregunta →
-
             </button>
-
         </div>
-
     </section>
 
-
-
     <!-- CIERRE -->
-
     <section class="closing-section">
-
         <span class="closing-symbol">{ }</span>
-
         <p class="section-kicker">EL SIGUIENTE PASO ES TUYO</p>
 
-
-
         <h2>
-
             Primero entendé el flujo.<br>
-
             <span>Después escribí el código.</span>
-
         </h2>
-</section>
-
-
+    </section>
 
 </main>
 
-
-
 <footer class="footer">
-<p>Recurso educativo · Ingeniería de Software · UML</p>
+    <p>Recurso educativo · Ingeniería de Software · UML</p>
 </footer>
 
-
-
-
+<!-- AMPLIACIÓN INTERACTIVA DEL DIAGRAMA Y LOS SÍMBOLOS -->
 <script>
-/* Ampliación interactiva del diagrama y los símbolos UML */
 document.addEventListener("DOMContentLoaded", function () {
     const overlay = document.createElement("div");
     overlay.className = "zoom-overlay";
     overlay.setAttribute("role", "dialog");
     overlay.setAttribute("aria-modal", "true");
-    overlay.setAttribute("aria-label", "Vista ampliada del diagrama o símbolo");
+    overlay.setAttribute(
+        "aria-label",
+        "Vista ampliada del diagrama o símbolo"
+    );
+
     overlay.innerHTML = `
         <div class="zoom-content">
-            <button class="zoom-close" type="button" aria-label="Cerrar ampliación">×</button>
+            <button class="zoom-close" type="button"
+                    aria-label="Cerrar ampliación">×</button>
             <div class="zoom-body"></div>
             <p class="zoom-hint">Presioná Esc o × para cerrar</p>
         </div>`;
+
     document.body.appendChild(overlay);
 
     const zoomBody = overlay.querySelector(".zoom-body");
@@ -964,6 +527,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openZoom(element, title, description = "") {
         zoomBody.replaceChildren();
+
         const heading = document.createElement("h3");
         heading.textContent = title;
         zoomBody.appendChild(heading);
@@ -989,20 +553,27 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeZoom() {
         overlay.classList.remove("open");
         document.body.style.overflow = "";
-        if (previousFocus) previousFocus.focus();
+
+        if (previousFocus) {
+            previousFocus.focus();
+        }
     }
 
     const diagram = document.querySelector(".hero-diagram");
+
     if (diagram) {
         const showDiagram = () => openZoom(
             diagram,
             "Diagrama de actividad UML",
             "Observá el inicio, las acciones, la decisión y los posibles resultados."
         );
+
         diagram.addEventListener("click", showDiagram);
+
         diagram.addEventListener("keydown", function (event) {
             if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault(); showDiagram();
+                event.preventDefault();
+                showDiagram();
             }
         });
     }
@@ -1011,35 +582,52 @@ document.addEventListener("DOMContentLoaded", function () {
         const display = card.querySelector(".symbol-display");
         const title = card.querySelector("h3");
         const description = card.querySelector("p");
-        if (!display || !title) return;
+
+        if (!display || !title) {
+            return;
+        }
 
         display.setAttribute("role", "button");
         display.setAttribute("tabindex", "0");
-        display.setAttribute("aria-label", "Ampliar símbolo: " + title.textContent.trim());
+        display.setAttribute(
+            "aria-label",
+            "Ampliar símbolo: " + title.textContent.trim()
+        );
 
         const showSymbol = () => openZoom(
             display,
             title.textContent.trim(),
             description ? description.textContent.trim() : ""
         );
+
         display.addEventListener("click", showSymbol);
+
         display.addEventListener("keydown", function (event) {
             if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault(); showSymbol();
+                event.preventDefault();
+                showSymbol();
             }
         });
     });
 
     closeButton.addEventListener("click", closeZoom);
+
     overlay.addEventListener("click", function (event) {
-        if (event.target === overlay) closeZoom();
+        if (event.target === overlay) {
+            closeZoom();
+        }
     });
+
     document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && overlay.classList.contains("open")) closeZoom();
+        if (
+            event.key === "Escape" &&
+            overlay.classList.contains("open")
+        ) {
+            closeZoom();
+        }
     });
 });
 </script>
 
 </body>
-
 </html>
