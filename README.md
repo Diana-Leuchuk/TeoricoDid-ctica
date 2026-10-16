@@ -1,633 +1,482 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aprende diagramas de actividad UML, sus símbolos, decisiones y flujos de trabajo.">
 
-    <title>Diagramas de Actividad UML | Ingeniería de Software</title>
+    <title>Diagramas de Actividad UML | Informática</title>
 
     <link rel="stylesheet" href="stylesda.css">
-    <script src="script.js" defer></script>
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<header class="navbar">
-    <span class="navbar-title">DIAGRAMA DE ACTIVIDAD <span>UML</span></span>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header class="header">
+        <a href="#inicio" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-diagram-project"></i></span>
+            <span>UML<span class="logo-highlight">Flow</span></span>
+        </a>
 
-    <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
-        <a href="#concepto">Concepto</a>
-        <a href="#simbolos">Símbolos</a>
-        <a href="#ejemplo">Ejemplo</a>
-        <a href="#desafio">Desafío</a>
-    </nav>
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Abrir menú" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-    <button class="menu-toggle" id="menuToggle" type="button"
-            aria-label="Abrir menú" aria-expanded="false">☰</button>
-</header>
+        <nav class="navbar" id="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#concepto">Concepto</a>
+            <a href="#simbologia">Simbología</a>
+            <a href="#ejemplo">Ejemplo práctico</a>
+            <a href="#cierre">Conclusión</a>
+        </nav>
+    </header>
 
-<main>
+    <main>
 
-    <!-- PORTADA -->
-    <section class="hero section" id="inicio">
+        <!-- PORTADA -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Aprendiendo UML
+                </span>
 
-        <div class="hero-content">
-            <div class="eyebrow">
-                <span class="status-dot"></span>
-                INGENIERÍA DE SOFTWARE / UML
-            </div>
-
-            <h1>
-                Dale forma<br>
-                a la <span class="highlight">lógica.</span>
-            </h1>
-
-            <p class="hero-description">
-                Descubrí cómo representar visualmente un proceso,
-                conectar acciones y tomar decisiones antes de
-                escribir una sola línea de código.
-            </p>
-
-            <div class="hero-note">
-                <span class="note-line"></span>
-                PENSAR · MODELAR · DESARROLLAR
-            </div>
-        </div>
-
-        <div class="hero-visual">
-            <div class="visual-top">
-                <div>
-                    <span class="mini-label">UML / ACTIVITY</span>
-                    <h3>Flujo de autenticación</h3>
-                </div>
-                <span class="live-tag">● DIAGRAMA</span>
-            </div>
-
-            <div class="diagram-canvas">
-                <svg class="hero-diagram zoomable-image"
-                     viewBox="0 0 380 390"
-                     role="button"
-                     tabindex="0"
-                     aria-label="Ampliar diagrama UML de inicio de sesión">
-
-                    <defs>
-                        <marker id="flechaHero"
-                                markerWidth="8"
-                                markerHeight="8"
-                                refX="6"
-                                refY="3"
-                                orient="auto">
-                            <path d="M0,0 L6,3 L0,6"
-                                  fill="none"
-                                  stroke="#72563E"
-                                  stroke-width="1.4"/>
-                        </marker>
-                    </defs>
-
-                    <circle cx="190" cy="24" r="8" fill="#493527"/>
-
-                    <path d="M190 32 V52"
-                          class="flow-line"
-                          marker-end="url(#flechaHero)"/>
-
-                    <rect x="105" y="56" width="170" height="46"
-                          rx="13" class="node-action"/>
-
-                    <text x="190" y="75" class="node-text">
-                        <tspan x="190">Ingresar usuario</tspan>
-                        <tspan x="190" dy="14">y contraseña</tspan>
-                    </text>
-
-                    <path d="M190 102 V126"
-                          class="flow-line"
-                          marker-end="url(#flechaHero)"/>
-
-                    <path d="M190 126 L239 158 L190 190 L141 158 Z"
-                          class="node-decision"/>
-
-                    <text x="190" y="155" class="decision-text">
-                        <tspan x="190">¿Datos</tspan>
-                        <tspan x="190" dy="12">válidos?</tspan>
-                    </text>
-
-                    <path d="M141 158 H69 V219"
-                          class="flow-line"
-                          marker-end="url(#flechaHero)"/>
-
-                    <text x="82" y="148" class="branch-label">NO</text>
-
-                    <rect x="8" y="222" width="122" height="43"
-                          rx="12" class="node-error"/>
-
-                    <text x="69" y="240" class="node-text">
-                        <tspan x="69">Mostrar</tspan>
-                        <tspan x="69" dy="13">error</tspan>
-                    </text>
-
-                    <path d="M69 265 V288 H105 V79"
-                          class="flow-return"
-                          marker-end="url(#flechaHero)"/>
-
-                    <path d="M239 158 H305 V219"
-                          class="flow-line"
-                          marker-end="url(#flechaHero)"/>
-
-                    <text x="269" y="148" class="branch-label">SÍ</text>
-
-                    <rect x="244" y="222" width="122" height="43"
-                          rx="12" class="node-success"/>
-
-                    <text x="305" y="240" class="node-text">
-                        <tspan x="305">Acceder al</tspan>
-                        <tspan x="305" dy="13">sistema</tspan>
-                    </text>
-
-                    <path d="M305 265 V304"
-                          class="flow-line"
-                          marker-end="url(#flechaHero)"/>
-
-                    <circle cx="305" cy="320" r="11"
-                            fill="none"
-                            stroke="#493527"
-                            stroke-width="2"/>
-
-                    <circle cx="305" cy="320" r="6" fill="#493527"/>
-
-                    <text x="190" y="372" class="diagram-caption">
-                        INICIO → DECISIÓN → RESULTADO
-                    </text>
-                </svg>
-            </div>
-
-            <div class="visual-footer">
-                <span><i class="legend-dot start"></i> Inicio</span>
-                <span><i class="legend-dot action"></i> Acción</span>
-                <span><i class="legend-dot decision"></i> Decisión</span>
-            </div>
-        </div>
-
-        <div class="hero-index">01 — MODELADO DE PROCESOS</div>
-    </section>
-
-    <!-- CONCEPTO -->
-    <section class="section content-section" id="concepto">
-
-        <div class="section-heading">
-            <span class="section-kicker">01 / ENTENDER</span>
-            <h2>¿Qué es un diagrama<br>de actividad?</h2>
-        </div>
-
-        <div class="concept-grid">
-            <div class="concept-main">
-                <p class="lead">
-                    Un diagrama de actividad es una representación
-                    gráfica que muestra el <strong>flujo de acciones
-                    y decisiones</strong> dentro de un proceso.
-                </p>
+                <h1>
+                    Diagramas de<br>
+                    <span>Actividad UML</span>
+                </h1>
 
                 <p>
-                    Forma parte de UML (Lenguaje Unificado de Modelado)
-                    y permite comprender cómo comienza una actividad,
-                    qué pasos se ejecutan, qué condiciones se evalúan
-                    y cómo finaliza el proceso.
+                    Representá visualmente los pasos de un proceso,
+                    las decisiones que pueden surgir y el recorrido
+                    que sigue una actividad desde su inicio hasta su final.
                 </p>
 
-                <p>
-                    En Ingeniería de Software se utiliza para analizar
-                    procesos, comunicar ideas y diseñar el comportamiento
-                    de un sistema antes de programarlo.
-                </p>
-            </div>
+                <div class="hero-buttons">
+                    <a href="#concepto" class="btn btn-primary">
+                        Comenzar a aprender
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
 
-            <aside class="quote-card">
-                <span class="quote-mark">“</span>
-                <p>
-                    Antes de programar una solución,
-                    necesitamos entender el problema.
-                </p>
-                <span class="quote-caption">LA LÓGICA ANTES DEL CÓDIGO</span>
-                <div class="quote-decoration">01<span>/</span>UML</div>
-            </aside>
-        </div>
-
-        <div class="benefit-grid">
-            <article class="benefit-card">
-                <span class="card-number">01</span>
-                <span class="feature-icon">◎</span>
-                <h3>Comprender</h3>
-                <p>Visualizar un proceso de principio a fin.</p>
-            </article>
-
-            <article class="benefit-card">
-                <span class="card-number">02</span>
-                <span class="feature-icon">◇</span>
-                <h3>Analizar</h3>
-                <p>Identificar condiciones, alternativas y errores.</p>
-            </article>
-
-            <article class="benefit-card">
-                <span class="card-number">03</span>
-                <span class="feature-icon">⌘</span>
-                <h3>Comunicar</h3>
-                <p>Compartir la lógica con el equipo de desarrollo.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- SIMBOLOGÍA -->
-    <section class="section symbols-section" id="simbolos">
-
-        <div class="section-heading">
-            <span class="section-kicker">02 / RECONOCER</span>
-            <h2>Las piezas del flujo.</h2>
-            <p>
-                Cada símbolo tiene una función específica.
-                Conocerlos es el primer paso para modelar procesos.
-            </p>
-        </div>
-
-        <div class="symbols-grid">
-
-            <article class="symbol-card">
-                <div class="symbol-display">
-                    <span class="uml-start"></span>
+                    <a href="#ejemplo" class="btn btn-secondary">
+                        Ver ejemplo
+                    </a>
                 </div>
-                <span class="symbol-number">SÍMBOLO 01</span>
-                <h3>Inicio</h3>
-                <p>Indica el punto donde comienza el flujo de actividad.</p>
-                <span class="symbol-name">Nodo inicial</span>
-            </article>
 
-            <article class="symbol-card">
-                <div class="symbol-display">
-                    <span class="uml-action">Ejecutar acción</span>
-                </div>
-                <span class="symbol-number">SÍMBOLO 02</span>
-                <h3>Actividad</h3>
-                <p>Representa una tarea, operación o paso del proceso.</p>
-                <span class="symbol-name">Nodo de acción</span>
-            </article>
-
-            <article class="symbol-card">
-                <div class="symbol-display">
-                    <span class="uml-diamond"><span>?</span></span>
-                </div>
-                <span class="symbol-number">SÍMBOLO 03</span>
-                <h3>Decisión</h3>
-                <p>Evalúa una condición y permite elegir entre caminos.</p>
-                <span class="symbol-name">Nodo de decisión</span>
-            </article>
-
-            <article class="symbol-card">
-                <div class="symbol-display">
-                    <span class="uml-arrow">→</span>
-                </div>
-                <span class="symbol-number">SÍMBOLO 04</span>
-                <h3>Flujo</h3>
-                <p>Conecta los pasos e indica el orden de ejecución.</p>
-                <span class="symbol-name">Flujo de control</span>
-            </article>
-
-            <article class="symbol-card">
-                <div class="symbol-display">
-                    <span class="uml-final"></span>
-                </div>
-                <span class="symbol-number">SÍMBOLO 05</span>
-                <h3>Final</h3>
-                <p>Señala la finalización de la actividad o del flujo.</p>
-                <span class="symbol-name">Nodo final</span>
-            </article>
-
-            <article class="symbol-card">
-                <div class="symbol-display">
-                    <span class="uml-fork">
-                        <i></i><i></i><i></i>
-                    </span>
-                </div>
-                <span class="symbol-number">SÍMBOLO 06</span>
-                <h3>Bifurcación</h3>
-                <p>Representa acciones que pueden ejecutarse en paralelo.</p>
-                <span class="symbol-name">Fork / Join</span>
-            </article>
-
-        </div>
-
-        <div class="tip-banner">
-            <span class="tip-icon">!</span>
-            <div>
-                <strong>Importante</strong>
-                <p>
-                    Una decisión selecciona un camino según una condición.
-                    Una bifurcación representa flujos paralelos.
-                    No son lo mismo.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- EJEMPLO -->
-    <section class="section example-section" id="ejemplo">
-
-        <div class="section-heading">
-            <span class="section-kicker">03 / APLICAR</span>
-            <h2>De la idea al proceso.</h2>
-            <p>
-                Veamos cómo funciona un inicio de sesión.
-                Seguí el recorrido y observá qué ocurre en cada caso.
-            </p>
-        </div>
-
-        <div class="example-layout">
-
-            <div class="example-info">
-                <span class="example-tag">CASO PRÁCTICO / 001</span>
-                <h3>Acceso a un sistema</h3>
-
-                <p>
-                    Un usuario ingresa sus credenciales.
-                    El sistema verifica los datos y decide
-                    si permite el acceso.
-                </p>
-
-                <div class="scenario-list">
+                <div class="hero-features">
                     <div>
-                        <span class="scenario-dot yes"></span>
-                        <p><strong>Si son válidos</strong><br>
-                        El usuario entra al sistema.</p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Conceptos básicos</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-shapes"></i>
+                        <span>Simbología UML</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-play"></i>
+                        <span>Ejemplo interactivo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="visual-card-header">
+                        <span class="status-dot"></span>
+                        <span>Flujo de una actividad</span>
                     </div>
 
-                    <div>
-                        <span class="scenario-dot no"></span>
-                        <p><strong>Si son incorrectos</strong><br>
-                        Se muestra un mensaje de error.</p>
+                    <div class="mini-diagram">
+                        <div class="mini-start">Inicio</div>
+                        <div class="mini-arrow"></div>
+                        <div class="mini-action">Ejecutar actividad</div>
+                        <div class="mini-arrow"></div>
+                        <div class="mini-decision">¿Finalizó?</div>
+                        <div class="mini-arrow"></div>
+                        <div class="mini-end"></div>
+                    </div>
+
+                    <div class="visual-card-footer">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        Un proceso, paso a paso
                     </div>
                 </div>
 
-                <button class="button-primary" id="runExample" type="button">
-                    Simular proceso <span>▶</span>
-                </button>
+                <div class="floating-icon floating-one">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="floating-icon floating-two">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+            </div>
+        </section>
 
-                <button class="button-secondary reset-button"
-                        id="resetExample" type="button">
-                    Reiniciar
-                </button>
-
-                <p class="simulation-status" id="simulationStatus"
-                   aria-live="polite">
-                    Presioná “Simular proceso” para comenzar.
+        <!-- CONCEPTO -->
+        <section class="section concept-section" id="concepto">
+            <div class="section-heading">
+                <span class="section-label">01 · CONCEPTO</span>
+                <h2>¿Qué es un diagrama de actividad?</h2>
+                <p>
+                    Una herramienta visual que permite comprender
+                    cómo se desarrolla un proceso.
                 </p>
             </div>
 
-            <div class="process-card">
-                <div class="process-header">
-                    <span>ACTIVITY FLOW</span>
-                    <span class="process-id">UML_001</span>
-                </div>
+            <div class="concept-grid">
+                <div class="concept-text">
+                    <p>
+                        Un <strong>diagrama de actividad UML</strong>
+                        es una representación gráfica que muestra
+                        la secuencia de acciones de un proceso, desde
+                        su punto de inicio hasta su finalización.
+                    </p>
 
-                <div class="process-flow" id="processFlow">
+                    <p>
+                        Se utiliza para describir el comportamiento
+                        de un sistema, organizar tareas y representar
+                        decisiones que modifican el recorrido de una actividad.
+                    </p>
 
-                    <div class="process-start process-node" data-step="0">
-                        <span class="uml-start"></span>
-                        <span>Inicio</span>
-                    </div>
+                    <p>
+                        Las flechas indican el sentido del flujo y los
+                        símbolos permiten reconocer qué sucede en cada etapa.
+                    </p>
 
-                    <span class="process-arrow" data-arrow="0">↓</span>
-
-                    <div class="process-action process-node" data-step="1">
-                        Ingresar credenciales
-                    </div>
-
-                    <span class="process-arrow" data-arrow="1">↓</span>
-
-                    <div class="process-decision process-node" data-step="2">
-                        <span>¿Datos válidos?</span>
-                    </div>
-
-                    <div class="decision-branches">
-                        <div class="branch branch-no">
-                            <span class="branch-label">NO</span>
-                            <span class="process-arrow" data-arrow="2">↓</span>
-
-                            <div class="branch-action process-node" data-step="3">
-                                Mostrar error
-                            </div>
-
-                            <span class="branch-caption">
-                                Volver a ingresar
-                            </span>
-                        </div>
-
-                        <div class="branch branch-yes">
-                            <span class="branch-label">SÍ</span>
-                            <span class="process-arrow" data-arrow="3">↓</span>
-
-                            <div class="branch-action process-node" data-step="4">
-                                Acceder al sistema
-                            </div>
-
-                            <span class="process-arrow" data-arrow="4">↓</span>
-
-                            <div class="process-end process-node" data-step="5">
-                                <span class="uml-final"></span>
-                                <span>Fin</span>
-                            </div>
+                    <div class="info-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div>
+                            <strong>Idea clave</strong>
+                            <p>
+                                El diagrama no solo muestra qué acciones
+                                existen, sino también en qué orden se realizan.
+                            </p>
                         </div>
                     </div>
                 </div>
+
+                <div class="concept-visual">
+                    <div class="concept-visual-title">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        Estructura básica
+                    </div>
+
+                    <div class="flow-example">
+                        <div class="flow-node flow-start">Inicio</div>
+                        <div class="flow-connector"></div>
+                        <div class="flow-node flow-action">
+                            Realizar una acción
+                        </div>
+                        <div class="flow-connector"></div>
+                        <div class="flow-node flow-end"></div>
+                        <span class="flow-caption">Fin del proceso</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMBOLOGÍA -->
+        <section class="section symbols-section" id="simbologia">
+            <div class="section-heading">
+                <span class="section-label">02 · SIMBOLOGÍA</span>
+                <h2>Los símbolos principales</h2>
+                <p>
+                    Cada figura representa un elemento del proceso.
+                    Conocé los símbolos fundamentales de un diagrama de actividad.
+                </p>
             </div>
 
-        </div>
-    </section>
+            <div class="symbols-grid">
 
-    <!-- DESAFÍO -->
-    <section class="section challenge-section" id="desafio">
+                <!-- SÍMBOLO 01 -->
+                <article class="symbol-card">
+                    <div class="symbol-number">SÍMBOLO 01</div>
 
-        <div class="challenge-heading">
-            <span class="section-kicker">04 / TU TURNO</span>
-            <h2>¿Pensás como<br>desarrollador?</h2>
+                    <div class="symbol-visual">
+                        <div class="uml-initial"></div>
+                    </div>
+
+                    <h3>Inicio</h3>
+                    <p>
+                        Es un círculo relleno que indica el punto
+                        donde comienza el proceso.
+                    </p>
+
+                    <span class="symbol-tag">Punto inicial</span>
+                </article>
+
+                <!-- SÍMBOLO 02 -->
+                <article class="symbol-card">
+                    <div class="symbol-number">SÍMBOLO 02</div>
+
+                    <div class="symbol-visual">
+                        <div class="uml-action">Realizar tarea</div>
+                    </div>
+
+                    <h3>Actividad o acción</h3>
+                    <p>
+                        Se representa con un rectángulo de esquinas
+                        redondeadas y describe una tarea que se ejecuta.
+                    </p>
+
+                    <span class="symbol-tag">Acción del proceso</span>
+                </article>
+
+                <!-- SÍMBOLO 03 -->
+                <article class="symbol-card">
+                    <div class="symbol-number">SÍMBOLO 03</div>
+
+                    <div class="symbol-visual">
+                        <div class="uml-decision">¿Condición?</div>
+                    </div>
+
+                    <h3>Decisión</h3>
+                    <p>
+                        Se representa mediante un rombo. Permite elegir
+                        un camino según una condición, por ejemplo,
+                        verdadero o falso.
+                    </p>
+
+                    <span class="symbol-tag">Evaluar una condición</span>
+                </article>
+
+                <!-- SÍMBOLO 04 -->
+                <article class="symbol-card">
+                    <div class="symbol-number">SÍMBOLO 04</div>
+
+                    <div class="symbol-visual">
+                        <div class="uml-flow">
+                            <span></span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                    </div>
+
+                    <h3>Flujo de control</h3>
+                    <p>
+                        Es una flecha que conecta los elementos e indica
+                        el orden en el que se realizan las acciones.
+                    </p>
+
+                    <span class="symbol-tag">Dirección del proceso</span>
+                </article>
+
+                <!-- SÍMBOLO 05 -->
+                <article class="symbol-card">
+                    <div class="symbol-number">SÍMBOLO 05</div>
+
+                    <div class="symbol-visual">
+                        <div class="uml-final">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <h3>Final</h3>
+                    <p>
+                        Se representa con un círculo exterior y un círculo
+                        interior relleno. Indica que el proceso terminó.
+                    </p>
+
+                    <span class="symbol-tag">Fin del proceso</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- EJEMPLO PRÁCTICO -->
+        <section class="section example-section" id="ejemplo">
+            <div class="section-heading">
+                <span class="section-label">03 · EJEMPLO PRÁCTICO</span>
+                <h2>Un proceso en el fútbol</h2>
+                <p>
+                    Acompañá a un futbolista que se prepara para ejecutar
+                    un tiro libre. Observá cómo cada acción forma parte
+                    de un proceso.
+                </p>
+            </div>
+
+            <div class="example-layout">
+
+                <div class="example-info">
+                    <div class="example-badge">
+                        <i class="fa-solid fa-futbol"></i>
+                        Caso de ejemplo
+                    </div>
+
+                    <h3>Ejecutar un tiro libre</h3>
+
+                    <p>
+                        El futbolista se prepara, observa la posición
+                        de la barrera y decide si puede ejecutar el tiro.
+                        Si las condiciones no son adecuadas, vuelve a
+                        acomodarse antes de intentarlo.
+                    </p>
+
+                    <div class="step-counter">
+                        <span id="stepNumber">Paso 1 de 6</span>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+
+                    <div class="step-description" id="stepDescription" aria-live="polite">
+                        El proceso comienza cuando el futbolista se dispone
+                        a ejecutar el tiro libre.
+                    </div>
+
+                    <div class="simulation-controls">
+                        <button class="btn btn-secondary" id="previousStep" type="button">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Anterior
+                        </button>
+
+                        <button class="btn btn-primary" id="nextStep" type="button">
+                            Siguiente
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <button class="reset-button" id="resetSimulation" type="button">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        Reiniciar simulación
+                    </button>
+                </div>
+
+                <div class="diagram-panel">
+                    <div class="diagram-panel-header">
+                        <div>
+                            <span class="panel-label">DIAGRAMA UML</span>
+                            <h3>Flujo del tiro libre</h3>
+                        </div>
+
+                        <div class="zoom-controls">
+                            <button id="zoomOut" type="button" aria-label="Alejar diagrama">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <button id="zoomReset" type="button" aria-label="Restablecer zoom">
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                            <button id="zoomIn" type="button" aria-label="Acercar diagrama">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="diagram-viewport" id="diagramViewport">
+                        <div class="activity-diagram" id="activityDiagram">
+
+                            <div class="diagram-node start-node" data-step="0">
+                                <span class="start-dot"></span>
+                                <span>Inicio</span>
+                            </div>
+
+                            <div class="diagram-arrow" data-step="0">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
+
+                            <div class="diagram-node action-node" data-step="1">
+                                Prepararse para el tiro
+                            </div>
+
+                            <div class="diagram-arrow" data-step="1">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
+
+                            <div class="diagram-node action-node" data-step="2">
+                                Observar la barrera
+                            </div>
+
+                            <div class="diagram-arrow" data-step="2">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
+
+                            <div class="diagram-node decision-node" data-step="3">
+                                <span>¿Está bien ubicado?</span>
+                            </div>
+
+                            <div class="decision-branches" data-step="3">
+                                <div class="branch branch-no">
+                                    <span class="branch-label">No</span>
+                                    <div class="branch-line"></div>
+                                    <div class="diagram-node action-node">
+                                        Ajustar la posición
+                                    </div>
+                                    <i class="fa-solid fa-arrow-down branch-arrow"></i>
+                                    <span class="branch-return">
+                                        Volver a observar
+                                    </span>
+                                </div>
+
+                                <div class="branch branch-yes">
+                                    <span class="branch-label">Sí</span>
+                                    <div class="branch-line"></div>
+                                    <div class="diagram-node action-node">
+                                        Ejecutar el tiro
+                                    </div>
+                                    <i class="fa-solid fa-arrow-down branch-arrow"></i>
+                                    <div class="diagram-node final-node">
+                                        <span></span>
+                                    </div>
+                                    <span class="final-caption">Fin</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="diagram-legend">
+                        <span><i class="legend-dot"></i> Inicio</span>
+                        <span><i class="legend-action"></i> Acción</span>
+                        <span><i class="legend-decision"></i> Decisión</span>
+                        <span><i class="legend-final"></i> Final</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CIERRE -->
+        <section class="closing-section" id="cierre">
+            <div class="closing-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <span class="section-label">PARA RECORDAR</span>
+            <h2>Un proceso se entiende mejor cuando podemos verlo.</h2>
+
             <p>
-                Poné a prueba lo que aprendiste.
-                Elegí la respuesta correcta en cada pregunta.
-            </p>
-            <div class="challenge-decoration">{ }</div>
-        </div>
-
-        <div class="quiz-card">
-            <div class="quiz-top">
-                <span>MINI DESAFÍO UML</span>
-                <span id="questionCounter">PREGUNTA 01 / 04</span>
-            </div>
-
-            <div class="quiz-progress">
-                <span id="quizProgress"></span>
-            </div>
-
-            <h3 id="questionText">
-                ¿Qué símbolo representa una decisión?
-            </h3>
-
-            <div class="quiz-options" id="quizOptions"></div>
-
-            <p class="quiz-feedback" id="quizFeedback" aria-live="polite">
-                Seleccioná una opción para continuar.
+                Los diagramas de actividad UML permiten organizar acciones,
+                representar decisiones y comprender el recorrido de un sistema.
+                Reconocer sus símbolos es el primer paso para crear diagramas
+                claros y útiles.
             </p>
 
-            <button class="button-primary quiz-next"
-                    id="quizNext" type="button" disabled>
-                Siguiente pregunta →
-            </button>
-        </div>
-    </section>
+            <a href="#inicio" class="btn btn-primary">
+                Volver al inicio
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </section>
 
-    <!-- CIERRE -->
-    <section class="closing-section">
-        <span class="closing-symbol">{ }</span>
-        <p class="section-kicker">EL SIGUIENTE PASO ES TUYO</p>
+    </main>
 
-        <h2>
-            Primero entendé el flujo.<br>
-            <span>Después escribí el código.</span>
-        </h2>
-    </section>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <a href="#inicio" class="footer-logo">
+            <i class="fa-solid fa-diagram-project"></i>
+            UMLFlow
+        </a>
 
-</main>
+        <p>Recurso educativo sobre diagramas de actividad UML.</p>
 
-<footer class="footer">
-    <p>Recurso educativo · Ingeniería de Software · UML</p>
-</footer>
+        <a href="#inicio" class="back-to-top" aria-label="Volver arriba">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </footer>
 
-<!-- AMPLIACIÓN INTERACTIVA DEL DIAGRAMA Y LOS SÍMBOLOS -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const overlay = document.createElement("div");
-    overlay.className = "zoom-overlay";
-    overlay.setAttribute("role", "dialog");
-    overlay.setAttribute("aria-modal", "true");
-    overlay.setAttribute(
-        "aria-label",
-        "Vista ampliada del diagrama o símbolo"
-    );
-
-    overlay.innerHTML = `
-        <div class="zoom-content">
-            <button class="zoom-close" type="button"
-                    aria-label="Cerrar ampliación">×</button>
-            <div class="zoom-body"></div>
-            <p class="zoom-hint">Presioná Esc o × para cerrar</p>
-        </div>`;
-
-    document.body.appendChild(overlay);
-
-    const zoomBody = overlay.querySelector(".zoom-body");
-    const closeButton = overlay.querySelector(".zoom-close");
-    let previousFocus = null;
-
-    function openZoom(element, title, description = "") {
-        zoomBody.replaceChildren();
-
-        const heading = document.createElement("h3");
-        heading.textContent = title;
-        zoomBody.appendChild(heading);
-
-        const copy = element.cloneNode(true);
-        copy.classList.remove("zoomable-image");
-        copy.removeAttribute("role");
-        copy.removeAttribute("tabindex");
-        zoomBody.appendChild(copy);
-
-        if (description) {
-            const paragraph = document.createElement("p");
-            paragraph.textContent = description;
-            zoomBody.appendChild(paragraph);
-        }
-
-        previousFocus = document.activeElement;
-        overlay.classList.add("open");
-        document.body.style.overflow = "hidden";
-        closeButton.focus();
-    }
-
-    function closeZoom() {
-        overlay.classList.remove("open");
-        document.body.style.overflow = "";
-
-        if (previousFocus) {
-            previousFocus.focus();
-        }
-    }
-
-    const diagram = document.querySelector(".hero-diagram");
-
-    if (diagram) {
-        const showDiagram = () => openZoom(
-            diagram,
-            "Diagrama de actividad UML",
-            "Observá el inicio, las acciones, la decisión y los posibles resultados."
-        );
-
-        diagram.addEventListener("click", showDiagram);
-
-        diagram.addEventListener("keydown", function (event) {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                showDiagram();
-            }
-        });
-    }
-
-    document.querySelectorAll(".symbol-card").forEach(function (card) {
-        const display = card.querySelector(".symbol-display");
-        const title = card.querySelector("h3");
-        const description = card.querySelector("p");
-
-        if (!display || !title) {
-            return;
-        }
-
-        display.setAttribute("role", "button");
-        display.setAttribute("tabindex", "0");
-        display.setAttribute(
-            "aria-label",
-            "Ampliar símbolo: " + title.textContent.trim()
-        );
-
-        const showSymbol = () => openZoom(
-            display,
-            title.textContent.trim(),
-            description ? description.textContent.trim() : ""
-        );
-
-        display.addEventListener("click", showSymbol);
-
-        display.addEventListener("keydown", function (event) {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                showSymbol();
-            }
-        });
-    });
-
-    closeButton.addEventListener("click", closeZoom);
-
-    overlay.addEventListener("click", function (event) {
-        if (event.target === overlay) {
-            closeZoom();
-        }
-    });
-
-    document.addEventListener("keydown", function (event) {
-        if (
-            event.key === "Escape" &&
-            overlay.classList.contains("open")
-        ) {
-            closeZoom();
-        }
-    });
-});
-</script>
-
+    <script src="script.js" defer></script>
 </body>
 </html>
