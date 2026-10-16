@@ -303,11 +303,16 @@ section {
     padding: 20px 0;
 }
 
+/* INICIO: CÍRCULO COMPLETAMENTE RELLENO */
+
 .mini-start {
-    width: 23px;
-    height: 23px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    border: none;
     border-radius: 50%;
     background: var(--dark);
+    box-shadow: none;
     font-size: 0;
 }
 
@@ -522,18 +527,16 @@ section {
     padding-top: 25px;
 }
 
-.flow-node {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+/* INICIO DEL EJEMPLO: CÍRCULO RELLENO */
 
 .flow-start {
-    width: 22px;
-    height: 22px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    border: none;
     border-radius: 50%;
     background: var(--dark);
+    box-shadow: none;
     font-size: 0;
 }
 
@@ -663,13 +666,15 @@ section {
     font-weight: 700;
 }
 
-/* Formas de la simbología */
+/* Símbolo UML de inicio: círculo sólido */
 
 .uml-initial {
     width: 35px;
     height: 35px;
+    border: none;
     border-radius: 50%;
     background: var(--dark);
+    box-shadow: none;
 }
 
 .uml-action {
@@ -955,13 +960,20 @@ section {
     font-size: 0.75rem;
 }
 
+/* CORRECCIÓN PRINCIPAL:
+   Nodo de inicio UML totalmente relleno */
+
 .start-dot {
-    width: 24px;
-    height: 24px;
-    border: 4px solid var(--dark);
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    flex-shrink: 0;
+    display: inline-block;
+    border: none;
+    outline: none;
     border-radius: 50%;
     background: var(--dark);
-    box-shadow: inset 0 0 0 3px #fbfbff;
+    box-shadow: none;
 }
 
 .action-node {
@@ -1448,6 +1460,10 @@ section {
         font-size: 0.68rem;
     }
 }
+
+/* =========================================
+   ACCESIBILIDAD: REDUCIR ANIMACIONES
+========================================= */
 
 @media (prefers-reduced-motion: reduce) {
     *,
