@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="stylesda.css">
 
-    <!-- Iconos -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -19,7 +18,9 @@
     <!-- MENÚ DE NAVEGACIÓN -->
     <header class="header">
         <a href="#inicio" class="logo">
-            <span class="logo-icon"><i class="fa-solid fa-diagram-project"></i></span>
+            <span class="logo-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+            </span>
             <span>UML<span class="logo-highlight">Flow</span></span>
         </a>
 
@@ -42,6 +43,7 @@
         <!-- PORTADA -->
         <section class="hero" id="inicio">
             <div class="hero-content">
+
                 <span class="eyebrow">
                     <i class="fa-solid fa-graduation-cap"></i>
                     Aprendiendo UML
@@ -74,10 +76,12 @@
                         <i class="fa-solid fa-circle-check"></i>
                         <span>Conceptos básicos</span>
                     </div>
+
                     <div>
                         <i class="fa-solid fa-shapes"></i>
                         <span>Simbología UML</span>
                     </div>
+
                     <div>
                         <i class="fa-solid fa-play"></i>
                         <span>Ejemplo interactivo</span>
@@ -87,17 +91,18 @@
 
             <div class="hero-visual">
                 <div class="visual-card">
+
                     <div class="visual-card-header">
                         <span class="status-dot"></span>
                         <span>Flujo de una actividad</span>
                     </div>
 
                     <div class="mini-diagram">
-                        <div class="mini-start">Inicio</div>
+                        <div class="mini-start"></div>
                         <div class="mini-arrow"></div>
                         <div class="mini-action">Ejecutar actividad</div>
                         <div class="mini-arrow"></div>
-                        <div class="mini-decision">¿Finalizó?</div>
+                        <div class="mini-decision"></div>
                         <div class="mini-arrow"></div>
                         <div class="mini-end"></div>
                     </div>
@@ -111,6 +116,7 @@
                 <div class="floating-icon floating-one">
                     <i class="fa-solid fa-code"></i>
                 </div>
+
                 <div class="floating-icon floating-two">
                     <i class="fa-solid fa-share-nodes"></i>
                 </div>
@@ -119,6 +125,7 @@
 
         <!-- CONCEPTO -->
         <section class="section concept-section" id="concepto">
+
             <div class="section-heading">
                 <span class="section-label">01 · CONCEPTO</span>
                 <h2>¿Qué es un diagrama de actividad?</h2>
@@ -129,6 +136,7 @@
             </div>
 
             <div class="concept-grid">
+
                 <div class="concept-text">
                     <p>
                         Un <strong>diagrama de actividad UML</strong>
@@ -150,6 +158,7 @@
 
                     <div class="info-note">
                         <i class="fa-solid fa-circle-info"></i>
+
                         <div>
                             <strong>Idea clave</strong>
                             <p>
@@ -161,40 +170,47 @@
                 </div>
 
                 <div class="concept-visual">
+
                     <div class="concept-visual-title">
                         <i class="fa-solid fa-diagram-project"></i>
                         Estructura básica
                     </div>
 
                     <div class="flow-example">
-                        <div class="flow-node flow-start">Inicio</div>
+                        <div class="flow-node flow-start"></div>
                         <div class="flow-connector"></div>
+
                         <div class="flow-node flow-action">
                             Realizar una acción
                         </div>
+
                         <div class="flow-connector"></div>
                         <div class="flow-node flow-end"></div>
+
                         <span class="flow-caption">Fin del proceso</span>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- SIMBOLOGÍA -->
+        <!-- SIMBOLOGÍA: SOLAMENTE CINCO SÍMBOLOS -->
         <section class="section symbols-section" id="simbologia">
+
             <div class="section-heading">
                 <span class="section-label">02 · SIMBOLOGÍA</span>
                 <h2>Los símbolos principales</h2>
                 <p>
                     Cada figura representa un elemento del proceso.
-                    Conocé los símbolos fundamentales de un diagrama de actividad.
+                    Conocé los cinco símbolos incluidos en esta sección.
                 </p>
             </div>
 
             <div class="symbols-grid">
 
-                <!-- SÍMBOLO 01 -->
+                <!-- SÍMBOLO 01: INICIO -->
                 <article class="symbol-card">
+
                     <div class="symbol-number">SÍMBOLO 01</div>
 
                     <div class="symbol-visual">
@@ -202,40 +218,49 @@
                     </div>
 
                     <h3>Inicio</h3>
+
                     <p>
                         Es un círculo relleno que indica el punto
                         donde comienza el proceso.
                     </p>
 
                     <span class="symbol-tag">Punto inicial</span>
+
                 </article>
 
-                <!-- SÍMBOLO 02 -->
+                <!-- SÍMBOLO 02: ACTIVIDAD O ACCIÓN -->
                 <article class="symbol-card">
+
                     <div class="symbol-number">SÍMBOLO 02</div>
 
                     <div class="symbol-visual">
-                        <div class="uml-action">Realizar tarea</div>
+                        <div class="uml-action">
+                            Realizar tarea
+                        </div>
                     </div>
 
                     <h3>Actividad o acción</h3>
+
                     <p>
                         Se representa con un rectángulo de esquinas
                         redondeadas y describe una tarea que se ejecuta.
                     </p>
 
                     <span class="symbol-tag">Acción del proceso</span>
+
                 </article>
 
-                <!-- SÍMBOLO 03 -->
+                <!-- SÍMBOLO 03: DECISIÓN -->
                 <article class="symbol-card">
+
                     <div class="symbol-number">SÍMBOLO 03</div>
 
                     <div class="symbol-visual">
-                        <div class="uml-decision">¿Condición?</div>
+                        <div class="uml-decision"></div>
                     </div>
 
                     <h3>Decisión</h3>
+
                     <p>
                         Se representa mediante un rombo. Permite elegir
                         un camino según una condición, por ejemplo,
@@ -243,10 +268,12 @@
                     </p>
 
                     <span class="symbol-tag">Evaluar una condición</span>
+
                 </article>
 
-                <!-- SÍMBOLO 04 -->
+                <!-- SÍMBOLO 04: FLUJO DE CONTROL -->
                 <article class="symbol-card">
+
                     <div class="symbol-number">SÍMBOLO 04</div>
 
                     <div class="symbol-visual">
@@ -257,16 +284,19 @@
                     </div>
 
                     <h3>Flujo de control</h3>
+
                     <p>
                         Es una flecha que conecta los elementos e indica
                         el orden en el que se realizan las acciones.
                     </p>
 
                     <span class="symbol-tag">Dirección del proceso</span>
+
                 </article>
 
-                <!-- SÍMBOLO 05 -->
+                <!-- SÍMBOLO 05: FINAL -->
                 <article class="symbol-card">
+
                     <div class="symbol-number">SÍMBOLO 05</div>
 
                     <div class="symbol-visual">
@@ -276,12 +306,14 @@
                     </div>
 
                     <h3>Final</h3>
+
                     <p>
                         Se representa con un círculo exterior y un círculo
                         interior relleno. Indica que el proceso terminó.
                     </p>
 
                     <span class="symbol-tag">Fin del proceso</span>
+
                 </article>
 
             </div>
@@ -289,9 +321,11 @@
 
         <!-- EJEMPLO PRÁCTICO -->
         <section class="section example-section" id="ejemplo">
+
             <div class="section-heading">
                 <span class="section-label">03 · EJEMPLO PRÁCTICO</span>
                 <h2>Un proceso en el fútbol</h2>
+
                 <p>
                     Acompañá a un futbolista que se prepara para ejecutar
                     un tiro libre. Observá cómo cada acción forma parte
@@ -302,6 +336,7 @@
             <div class="example-layout">
 
                 <div class="example-info">
+
                     <div class="example-badge">
                         <i class="fa-solid fa-futbol"></i>
                         Caso de ejemplo
@@ -318,6 +353,7 @@
 
                     <div class="step-counter">
                         <span id="stepNumber">Paso 1 de 6</span>
+
                         <div class="progress-track">
                             <div class="progress-fill" id="progressFill"></div>
                         </div>
@@ -329,6 +365,7 @@
                     </div>
 
                     <div class="simulation-controls">
+
                         <button class="btn btn-secondary" id="previousStep" type="button">
                             <i class="fa-solid fa-arrow-left"></i>
                             Anterior
@@ -338,15 +375,18 @@
                             Siguiente
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
+
                     </div>
 
                     <button class="reset-button" id="resetSimulation" type="button">
                         <i class="fa-solid fa-rotate-right"></i>
                         Reiniciar simulación
                     </button>
+
                 </div>
 
                 <div class="diagram-panel">
+
                     <div class="diagram-panel-header">
                         <div>
                             <span class="panel-label">DIAGRAMA UML</span>
@@ -354,19 +394,24 @@
                         </div>
 
                         <div class="zoom-controls">
+
                             <button id="zoomOut" type="button" aria-label="Alejar diagrama">
                                 <i class="fa-solid fa-minus"></i>
                             </button>
+
                             <button id="zoomReset" type="button" aria-label="Restablecer zoom">
                                 <i class="fa-solid fa-expand"></i>
                             </button>
+
                             <button id="zoomIn" type="button" aria-label="Acercar diagrama">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
+
                         </div>
                     </div>
 
                     <div class="diagram-viewport" id="diagramViewport">
+
                         <div class="activity-diagram" id="activityDiagram">
 
                             <div class="diagram-node start-node" data-step="0">
@@ -399,30 +444,45 @@
                             </div>
 
                             <div class="decision-branches" data-step="3">
+
                                 <div class="branch branch-no">
+
                                     <span class="branch-label">No</span>
+
                                     <div class="branch-line"></div>
+
                                     <div class="diagram-node action-node">
                                         Ajustar la posición
                                     </div>
+
                                     <i class="fa-solid fa-arrow-down branch-arrow"></i>
+
                                     <span class="branch-return">
                                         Volver a observar
                                     </span>
+
                                 </div>
 
                                 <div class="branch branch-yes">
+
                                     <span class="branch-label">Sí</span>
+
                                     <div class="branch-line"></div>
+
                                     <div class="diagram-node action-node">
                                         Ejecutar el tiro
                                     </div>
+
                                     <i class="fa-solid fa-arrow-down branch-arrow"></i>
+
                                     <div class="diagram-node final-node">
                                         <span></span>
                                     </div>
+
                                     <span class="final-caption">Fin</span>
+
                                 </div>
+
                             </div>
 
                         </div>
@@ -434,19 +494,24 @@
                         <span><i class="legend-decision"></i> Decisión</span>
                         <span><i class="legend-final"></i> Final</span>
                     </div>
+
                 </div>
 
             </div>
         </section>
 
-        <!-- CIERRE -->
+        <!-- CIERRE: SIN CUESTIONARIO -->
         <section class="closing-section" id="cierre">
+
             <div class="closing-icon">
                 <i class="fa-solid fa-lightbulb"></i>
             </div>
 
             <span class="section-label">PARA RECORDAR</span>
-            <h2>Un proceso se entiende mejor cuando podemos verlo.</h2>
+
+            <h2>
+                Un proceso se entiende mejor cuando podemos verlo.
+            </h2>
 
             <p>
                 Los diagramas de actividad UML permiten organizar acciones,
@@ -459,12 +524,14 @@
                 Volver al inicio
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
+
         </section>
 
     </main>
 
     <!-- PIE DE PÁGINA -->
     <footer class="footer">
+
         <a href="#inicio" class="footer-logo">
             <i class="fa-solid fa-diagram-project"></i>
             UMLFlow
@@ -475,8 +542,10 @@
         <a href="#inicio" class="back-to-top" aria-label="Volver arriba">
             <i class="fa-solid fa-arrow-up"></i>
         </a>
+
     </footer>
 
     <script src="script.js" defer></script>
+
 </body>
 </html>
